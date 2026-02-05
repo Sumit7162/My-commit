@@ -16,9 +16,10 @@ jobs:
         run: echo "Updated on $(date)" >> log.txt
 
       - name: Commit changes
-        run: |
-          git config --global user.name "Sumit7162"
-          git config --global user.email "sharmasumit716210@gmail.com"
-          git add .
-          git commit -m "Auto daily commit"
-          git push
+  run: |
+    git config --global user.name "Sumit7162"
+    git config --global user.email "sharmasumit716210@gmail.com"
+    git add .
+    git commit -m "Auto daily commit" || echo "No changes to commit"
+    git push
+
