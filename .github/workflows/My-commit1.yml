@@ -21,4 +21,5 @@ jobs:
           git config --global user.email "sharmasumit716210@gmail.com"
           git add .
           git commit -m "Auto daily commit" || echo "No changes to commit"
+          git pull --rebase origin main
           git push
